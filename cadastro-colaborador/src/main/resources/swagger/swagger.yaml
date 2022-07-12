@@ -1,0 +1,153 @@
+#openapi: 3.0.3
+#info:
+#  title: API Clínica
+#  description: API para controlar funcionários dentro do consultório
+#  version: 0.0.1
+#servers:
+#  - url: https://6213a72089fad53b1ffc8435.mockapi.io/
+#    description: API de teste
+#paths:
+#  /especialidades:
+#    get:
+#      summary: Recupera todas as especialidades
+#      responses:
+#        200:
+#          description: "Sucesso"
+#          content:
+#            application/json:
+#              schema:
+#                type: array
+#                items:
+#                  $ref: "#/components/schemas/Funcionario"
+#    post:
+#      summary: Adiciona um novo funcionário
+#      requestBody:
+#        content:
+#          application/json:
+#            schema:
+#              type: object
+#              properties:
+#                descricao:
+#                  type: string
+#      responses:
+#        200:
+#          description: "Sucesso"
+#          content:
+#            application/json:
+#              schema:
+#                type: array
+#                items:
+#                  $ref: "#/components/schemas/Funcionario"
+#  /especialidades/{id}:
+#    parameters:
+#      - name: id
+#        in: path
+#        schema:
+#          type: integer
+#        required: true
+#    get:
+#      summary: Recupera funcionário pelo id
+#      responses:
+#        200:
+#          description: "Sucesso"
+#          content:
+#            application/json:
+#              schema:
+#                $ref: "#/components/schemas/Funcionario"
+#        404:
+#          description: Funcionário não encontrada
+#          content:
+#            application/json:
+#              example: "Not Found"
+#    put:
+#      summary: Atualiza funcionário pelo id
+#      requestBody:
+#        content:
+#          application/json:
+#            schema:
+#              $ref: "#/components/schemas/Funcionario"
+#      responses:
+#        200:
+#          description: "Sucesso"
+#          content:
+#            application/json:
+#              schema:
+#                $ref: "#/components/schemas/Funcionario"
+#        404:
+#          description: Funcionário não encontrada
+#          content:
+#            application/json:
+#              example: "Not Found"
+#    delete:
+#      summary: Deleta funcionário pelo id
+#      responses:
+#        200:
+#          description: "Sucesso"
+#          content:
+#            application/json:
+#              schema:
+#                $ref: "#/components/schemas/Funcionario"
+#        404:
+#          description: Funcionário não encontrada
+#          content:
+#            application/json:
+#              example: "Not Found"
+#security:
+#  - auth: []
+#components:
+#  schemas:
+#    Funcionario:
+#      type: object
+#      properties:
+#        id:
+#          type: integer
+#        nome:
+#          type: string
+#        dataNascimento:
+#          type: string
+#        dataContratacao:
+#          type: string
+#        rg:
+#          type: string
+#        cpf:
+#          type: string
+#        email:
+#          type: string
+#        telefone:
+#          type: number
+#        endereco:
+#          type: string
+#        tipoContrato:
+#          type: string
+#        cargo:
+#          type: object
+#          $ref: "#/components/schemas/Cargos"
+#    Cargos:
+#      type: object
+#      properties:
+#        carteiraRegistro:
+#          type: integer
+#        categoria:
+#          type: string
+#        salario:
+#          type: object
+#          $ref: "#/components/schemas/Salario"
+#    Salario:
+#      type: object
+#      properties:
+#        jornada:
+#          type: string
+#        salario:
+#          type: number
+#        bonus:
+#          type: number
+#    Ex-Funcionario:
+#      type: object
+#      properties:
+#        dataDesligamento:
+#          type: string
+#
+#  securitySchemes:
+#    auth:
+#      type: http
+#      scheme: bearer

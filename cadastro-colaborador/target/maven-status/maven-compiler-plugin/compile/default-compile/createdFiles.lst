@@ -2,4 +2,5 @@ com\cadastro\colaborador\CadastroColaboradorApplication.class
 com\cadastro\colaborador\config\SwaggerConfig.class
 com\cadastro\colaborador\controller\ColaboradorController.class
 com\cadastro\colaborador\repository\ColaboradorRepository.class
+com\cadastro\colaborador\domain\FuncionarioDomain.class
 com\cadastro\colaborador\service\ColaboradorService.class
