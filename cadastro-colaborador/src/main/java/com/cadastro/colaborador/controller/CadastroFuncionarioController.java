@@ -29,8 +29,9 @@ public class CadastroFuncionarioController {
     }
 
     @PostMapping
-    public void cadastrarFuncionarios(Funcionarios funcionarios, Cargos cargos, ExFuncionario exFuncionario, Salario salario){
+    public ResponseEntity<Void> cadastrarFuncionarios(Funcionarios funcionarios, Cargos cargos, ExFuncionario
+            exFuncionario, Salario salario){
         cadastrarFuncionarios(funcionarios, cargos, exFuncionario,salario);
-        ResponseEntity.status(HttpStatus.CREATED).build();
+        return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 }
