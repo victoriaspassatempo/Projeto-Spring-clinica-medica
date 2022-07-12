@@ -8,6 +8,7 @@ public class CadastroColaboradorApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CadastroColaboradorApplication.class, args);
+		System.out.println("Aplicação no ar!");
 	}
 
 }
