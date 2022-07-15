@@ -8,8 +8,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CadastroFuncionariosService {
-    @Autowired
-    private FuncionariosRepository funcionariosRepository;
+
+    private final  FuncionariosRepository funcionariosRepository;
+
+    public CadastroFuncionariosService(FuncionariosRepository funcionariosRepository) {
+        this.funcionariosRepository = funcionariosRepository;
+    }
 
     public void cadastrarFuncionarios(Funcionarios funcionarios){
         FuncionariosRepository.save(FuncionariosMapper.toFuncionariosDomain(funcionarios));

@@ -8,8 +8,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CadastroSalarioService {
-    @Autowired
-    private SalarioRepository salarioRepository;
+
+    private final  SalarioRepository salarioRepository;
+
+    public CadastroSalarioService(SalarioRepository salarioRepository) {
+        this.salarioRepository = salarioRepository;
+    }
 
     public void cadastrarSalario(Salario salario){
         SalarioRepository.save(SalarioMapper.toSalarioDomain(salario));

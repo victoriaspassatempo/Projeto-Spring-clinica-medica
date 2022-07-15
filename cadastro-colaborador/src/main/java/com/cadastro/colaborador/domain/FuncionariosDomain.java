@@ -1,5 +1,6 @@
 package com.cadastro.colaborador.domain;
 
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
