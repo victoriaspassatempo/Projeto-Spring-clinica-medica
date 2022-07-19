@@ -5,6 +5,8 @@ import java.time.LocalDate;
 public class ExFuncionario {
     private LocalDate dataDesligamento;
 
+    private Integer idFuncionario;
+
     public LocalDate getDataDesligamento() {
         return dataDesligamento;
     }

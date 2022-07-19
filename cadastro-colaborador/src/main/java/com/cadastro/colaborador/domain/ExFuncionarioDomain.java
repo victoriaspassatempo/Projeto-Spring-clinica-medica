@@ -1,12 +1,13 @@
 package com.cadastro.colaborador.domain;
 
 
+import org.springframework.context.annotation.Primary;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import java.time.LocalDate;
-
 @Entity
 @Table(name = "exfuncionario")
 public class ExFuncionarioDomain {

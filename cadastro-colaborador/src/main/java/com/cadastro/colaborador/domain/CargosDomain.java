@@ -1,10 +1,11 @@
 package com.cadastro.colaborador.domain;
 
 
+import org.springframework.context.annotation.Primary;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-
 @Entity
 @Table(name = "cargos")
 public class CargosDomain {

@@ -1,6 +1,8 @@
 package com.cadastro.colaborador.domain;
 
 
+import org.springframework.context.annotation.Primary;
+
 import javax.persistence.*;
 import java.time.LocalTime;
 

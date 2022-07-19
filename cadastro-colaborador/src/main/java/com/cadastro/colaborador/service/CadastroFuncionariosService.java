@@ -6,16 +6,9 @@ import com.cadastro.colaborador.repository.FuncionariosRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.PersistenceContext;
+
 @Service
 public class CadastroFuncionariosService {
 
-    private final  FuncionariosRepository funcionariosRepository;
-
-    public CadastroFuncionariosService(FuncionariosRepository funcionariosRepository) {
-        this.funcionariosRepository = funcionariosRepository;
-    }
-
-    public void cadastrarFuncionarios(Funcionarios funcionarios){
-        FuncionariosRepository.save(FuncionariosMapper.toFuncionariosDomain(funcionarios));
-    }
 }

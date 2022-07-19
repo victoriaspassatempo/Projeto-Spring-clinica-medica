@@ -9,13 +9,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class CadastroExFuncionarioService {
 
-    private final ExFuncionarioRepository exfuncionarioRepository;
 
-    public CadastroExFuncionarioService(ExFuncionarioRepository exfuncionarioRepository) {
-        this.exfuncionarioRepository = exfuncionarioRepository;
-    }
 
-    public void cadastrarExFuncionario(ExFuncionario exfuncionario){
-        ExFuncionarioRepository.save(ExFuncionarioMapper.toExFuncionarioDomain(exfuncionario));
-    }
 }

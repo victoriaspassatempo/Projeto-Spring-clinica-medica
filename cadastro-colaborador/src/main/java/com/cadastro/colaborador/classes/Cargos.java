@@ -1,11 +1,20 @@
 package com.cadastro.colaborador.classes;
 
-import java.time.LocalDate;
 
 public class Cargos {
     private String descricao;
     private Integer registro;
     private String categoria;
+
+    private double salario;
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
 
     public String getDescricao() {
         return descricao;
